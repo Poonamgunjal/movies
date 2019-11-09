@@ -8,9 +8,31 @@ class MoviesList extends React.Component {
 
 }
 
-searchData=()=>{
-console.log('data is not Present'); 
+searchData=(e)=>{
+  let data =this.state.movies;
+console.log('data is not Present',e.target.value); 
+let filterKey =e.target.value;
+var filterData = data.map(function(key, value)
+{
+  
+ return ;
+});
+this.setState({
+  movies:this.state.movies
+});
 }
+sortColumns=(key)=>{
+  let data =this.state.movies;
+ var sortData = data.sort(function(a, b)
+  {
+   var one = a[key]; var two = b[key];
+   return ((one < two) ? -1 : ((one > two) ? 1 : 0));
+  });
+  
+  this.setState({
+    movies:sortData
+  });
+  }
   render() {
   
     return (
@@ -22,8 +44,8 @@ console.log('data is not Present');
       <table id="myTable" style={{"paddingBottom":"10%"}}>
         <tbody>
           <tr className="header">
-          <th style={{"width":"60%"}} >Movies Name</th>
-          <th style={{"width":"40%"}} >Type Of Movies</th>
+          <th style={{"width":"60%",'cursor':'pointer'}} onClick={() => {this.sortColumns('name')}} >Movies Name</th>
+          <th style={{"width":"40%",'cursor':'pointer'}} onClick={() => {this.sortColumns('type')}}>Type Of Movies</th>
         </tr>
         {  this.state.movies.map((movie,index)=>{
             return(

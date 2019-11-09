@@ -26,22 +26,22 @@ export const Data=[{
 
 export const Movies =[
   {
-   "name":"movie one",
-   "type" :"Animated"
+   "name":"nmovie one",
+   "type" :"Bollywood"
 },
 {
-  "name":"movie two",
+  "name":"omovie two",
   "type" :"Animated"
 },
 {
-  "name":"movie three",
-  "type" :"Animated"
+  "name":"kmovie three",
+  "type" :"Bollywood"
 },
 {
-  "name":"movie four",
-  "type" :"Animated"
+  "name":"smovie four",
+  "type" :"Hollywood"
 },
 {
-  "name":"movie five",
-  "type" :"Animated"
+  "name":"amovie five",
+  "type" :"Tollywood"
 }];
